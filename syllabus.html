@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Training Syllabus & Pricing</title>
+  <style>
+    :root {
+      --bg: #f6f8fc;
+      --bg-2: #eef3fb;
+      --card: rgba(255, 255, 255, 0.9);
+      --text: #0f172a;
+      --muted: #5b6475;
+      --line: #dbe3ef;
+      --accent: #2563eb;
+      --accent-2: #0f766e;
+      --accent-3: #7c3aed;
+      --success: #138a4a;
+      --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 30%),
+        radial-gradient(circle at top right, rgba(15, 118, 110, 0.12), transparent 26%),
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 18px 56px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(219, 227, 239, 0.9);
+      border-radius: 30px;
+      padding: 34px 24px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.94), rgba(245,249,255,0.95));
+      box-shadow: var(--shadow);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(20px);
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 180px;
+      height: 180px;
+      background: rgba(37, 99, 235, 0.16);
+      top: -50px;
+      right: -20px;
+    }
+
+    .hero::after {
+      width: 220px;
+      height: 220px;
+      background: rgba(15, 118, 110, 0.14);
+      bottom: -90px;
+      left: -60px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid rgba(37, 99, 235, 0.14);
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      margin: 16px 0 12px;
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      max-width: 14ch;
+      position: relative;
+      z-index: 1;
+    }
+
+    .lead {
+      max-width: 860px;
+      font-size: 1.08rem;
+      color: var(--muted);
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .metric {
+      background: rgba(255,255,255,0.82);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      backdrop-filter: blur(8px);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.4rem;
+      line-height: 1;
+      margin-bottom: 6px;
+      color: var(--accent-2);
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 22px 0 30px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--line);
+      padding: 10px 14px;
+      border-radius: 999px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .nav a:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: 26px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .section h2 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+      letter-spacing: -0.03em;
+    }
+
+    .section h2::before {
+      content: "";
+      display: block;
+      width: 56px;
+      height: 4px;
+      margin-bottom: 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    }
+
+    .section p.section-intro {
+      margin: 0 0 18px;
+      color: var(--muted);
+      max-width: 920px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.12rem;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+    }
+
+    .card ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+    }
+
+    .card li { margin: 6px 0; }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 999px;
+      padding: 6px 10px;
+    }
+
+    .track-banner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.07), rgba(15, 118, 110, 0.07));
+      border: 1px solid rgba(219, 227, 239, 0.95);
+      margin-bottom: 18px;
+    }
+
+    .track-banner strong {
+      display: block;
+      font-size: 1.08rem;
+      margin-bottom: 4px;
+    }
+
+    .track-banner span {
+      color: var(--muted);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .skill-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .skill-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #fff, #f8fbff);
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .section-flag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.08);
+      color: var(--accent-2);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .price-model-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .price-model {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: linear-gradient(180deg, #fff, #f9fbff);
+      padding: 20px;
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.05);
+    }
+
+    .price-model.primary { border-color: rgba(37, 99, 235, 0.22); }
+    .price-model.secondary { border-color: rgba(15, 118, 110, 0.22); }
+
+    .price-model .range {
+      font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+      line-height: 1;
+      margin: 8px 0 8px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .price-model .meta {
+      color: var(--muted);
+      margin: 0 0 12px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+      padding: 14px 16px;
+    }
+
+    details + details { margin-top: 12px; }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      list-style: none;
+      outline: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      float: right;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    details[open] summary::after { content: "–"; }
+
+    .module-body {
+      margin-top: 12px;
+      color: var(--muted);
+    }
+
+    .module-body ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+
+    .module-body li { margin: 6px 0; }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .price-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #fff, #fbfcff);
+      padding: 20px;
+    }
+
+    .price-card.popular {
+      border-color: rgba(37, 99, 235, 0.35);
+      box-shadow: 0 18px 40px rgba(37, 99, 235, 0.08);
+    }
+
+    .price-card.enterprise {
+      border-color: rgba(15, 118, 110, 0.35);
+    }
+
+    .price-card .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .badge.blue { background: rgba(37, 99, 235, 0.09); color: var(--accent); }
+    .badge.green { background: rgba(15, 118, 110, 0.1); color: var(--accent-2); }
+    .badge.purple { background: rgba(124, 58, 237, 0.1); color: var(--accent-3); }
+
+    .price {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin: 8px 0 6px;
+    }
+
+    .price small {
+      font-size: 1rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .price-card ul {
+      margin: 14px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .note {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(19, 138, 74, 0.08);
+      border: 1px solid rgba(19, 138, 74, 0.16);
+      color: #0f5132;
+    }
+
+    .footer {
+      margin-top: 26px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .summary-table th,
+    .summary-table td {
+      border-bottom: 1px solid var(--line);
+      padding: 14px 16px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .summary-table th {
+      background: var(--bg-2);
+      font-size: 0.92rem;
+    }
+
+    .summary-table tr:last-child td { border-bottom: none; }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .mini-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .grid-2,
+      .grid-3,
+      .pricing-grid,
+      .split,
+      .skills-grid,
+      .price-model-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .wrap { padding: 16px 12px 40px; }
+      .hero, .section { padding: 18px; border-radius: 22px; }
+      h1 { max-width: none; }
+      .summary-table th, .summary-table td { padding: 12px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .nav { display: none; }
+      .hero, .section, .price-card, details { box-shadow: none; }
+      .wrap { max-width: none; padding: 0; }
+      .section, .hero { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <span class="eyebrow">AI Training Curriculum & Pricing</span>
+      <h1>Comprehensive 1-on-1 AI syllabus for technical and non-technical learners</h1>
+      <p class="lead">
+        This page turns the source notes into a structured training document covering both tracks, the learning format,
+        post-course support, certification, and pricing. The program is designed around practical learning, real projects,
+        and mastery before graduation.
+      </p>
+
+      <div class="hero-grid">
+        <div class="metric"><strong>2 Tracks</strong><span>Non-technical and technical paths</span></div>
+        <div class="metric"><strong>12–16 Weeks</strong><span>Flexible pacing based on confidence</span></div>
+        <div class="metric"><strong>1:1 Sessions</strong><span>Personalized live coaching and practice</span></div>
+        <div class="metric"><strong>Post Support</strong><span>Follow-up guidance after completion</span></div>
+      </div>
+    </header>
+
+    <nav class="nav" aria-label="Section navigation">
+      <a href="#overview">Overview</a>
+      <a href="#tracks">Tracks</a>
+      <a href="#skills">Skills</a>
+      <a href="#modules">Modules</a>
+      <a href="#support">Support</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#capstones">Capstones</a>
+    </nav>
+
+    <section class="section" id="overview">
+      <h2>Program Overview</h2>
+      <p class="section-intro">
+        The program is built for people who want to genuinely learn AI, not simply rush through a checklist. Learners are
+        guided until they can confidently apply AI in real workflows, build useful projects, and explain what they created.
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <span class="tag">Learning approach</span>
+          <h3>Mastery over speed</h3>
+          <p>
+            Every learner progresses at their own pace. Topics can be revisited when needed, and the instructor can spend more
+            time on difficult concepts until they are clear and usable.
+          </p>
+        </div>
+        <div class="card">
+          <span class="tag">Delivery model</span>
+          <h3>Live coaching with practice</h3>
+          <p>
+            The curriculum combines live 1:1 training, guided projects, practice assignments, and resource recommendations so
+            learners build confidence through application rather than passive study.
+          </p>
+        </div>
+      </div>
+
+      <div class="chips" aria-label="Program highlights">
+        <span class="chip">Hands-on projects</span>
+        <span class="chip">Real-world AI tools</span>
+        <span class="chip">Personalized support</span>
+        <span class="chip">Certification included</span>
+        <span class="chip">Flexible schedule</span>
+        <span class="chip">Post-course guidance</span>
+      </div>
+    </section>
+
+    <section class="section" id="tracks">
+      <h2>Training Tracks</h2>
+      <p class="section-intro">
+        Choose the path that matches the learner’s background and goal: use AI effectively without code, or build and deploy
+        AI systems with code.
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <span class="tag">Track 1</span>
+          <h3>Non-Technical Track</h3>
+          <p>
+            Designed for professionals, founders, operators, and creatives who want to use AI tools, automate work, and build
+            practical outcomes without programming.
+          </p>
+          <ul>
+            <li>AI and ML fundamentals in plain language</li>
+            <li>Generative AI trends and real-world use cases</li>
+            <li>ChatGPT, Claude-style assistants, and prompt workflows</li>
+            <li>Midjourney, DALL-E, Jasper, Copy.ai, Airtable AI, and Teachable Machine</li>
+            <li>Zapier, Make, n8n, webhooks, and no-code automation</li>
+            <li>Local AI use, privacy, token management, and cost control</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="tag">Track 2</span>
+          <h3>Technical Track</h3>
+          <p>
+            Designed for developers, data scientists, and technical learners who want full-stack AI knowledge, including model
+            building, deployment, and production workflows.
+          </p>
+          <ul>
+            <li>Python, NumPy, Pandas, and math foundations</li>
+            <li>Linear/logistic regression, trees, ensembles, and evaluation</li>
+            <li>TensorFlow, PyTorch, CNNs, RNNs, and transformers</li>
+            <li>NLP, tokenization, LLMs, computer vision, and RL basics</li>
+            <li>RAG, vector databases, quantization, fine-tuning, and alignment</li>
+            <li>Git, Docker, Kubernetes basics, CI/CD, and MLOps</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <h2>Skills and Tools Covered</h2>
+      <p class="section-intro">
+        This section makes the coverage explicit so nothing important is missed. It maps the full skill set across both tracks
+        and shows the tools, workflows, and outcomes taught in the syllabus.
+      </p>
+
+      <div class="skills-grid">
+        <div class="card">
+          <span class="section-flag">Non-Technical Skills</span>
+          <h3>Operational AI skills</h3>
+          <ul>
+            <li>Understanding what AI, machine learning, and generative AI are</li>
+            <li>Recognizing practical use cases in marketing, HR, support, and operations</li>
+            <li>Writing effective prompts with examples, roles, and structured outputs</li>
+            <li>Managing tokens, rate limits, and API costs responsibly</li>
+            <li>Creating no-code workflows for content, leads, emails, and spreadsheets</li>
+            <li>Building simple prototypes such as blog generators and image classifiers</li>
+            <li>Using local LLMs for privacy-sensitive work and offline document analysis</li>
+            <li>Planning capstones around business value, ROI, and responsible AI</li>
+          </ul>
+          <div class="skill-stack">
+            <span class="skill-pill">ChatGPT</span>
+            <span class="skill-pill">Claude-style assistants</span>
+            <span class="skill-pill">Midjourney</span>
+            <span class="skill-pill">DALL-E</span>
+            <span class="skill-pill">Jasper</span>
+            <span class="skill-pill">Copy.ai</span>
+            <span class="skill-pill">Zapier</span>
+            <span class="skill-pill">Make</span>
+            <span class="skill-pill">n8n</span>
+            <span class="skill-pill">Airtable AI</span>
+            <span class="skill-pill">Teachable Machine</span>
+            <span class="skill-pill">LM Studio</span>
+            <span class="skill-pill">Ollama</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="section-flag">Technical Skills</span>
+          <h3>Engineering AI skills</h3>
+          <ul>
+            <li>Refreshing Python, Pandas, NumPy, and core math foundations</li>
+            <li>Training and evaluating supervised learning models</li>
+            <li>Using TensorFlow and PyTorch for neural networks and deep learning</li>
+            <li>Working with CNNs, RNNs, transformers, tokenization, and LLMs</li>
+            <li>Implementing RAG, embeddings, chunking, and vector search</li>
+            <li>Fine-tuning with Hugging Face, PEFT, LoRA, QLoRA, and alignment methods</li>
+            <li>Building APIs, async workflows, and structured tool-calling systems</li>
+            <li>Packaging and deploying with Git, Docker, Kubernetes basics, CI/CD, and telemetry</li>
+          </ul>
+          <div class="skill-stack">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">NumPy</span>
+            <span class="skill-pill">Pandas</span>
+            <span class="skill-pill">scikit-learn</span>
+            <span class="skill-pill">TensorFlow</span>
+            <span class="skill-pill">PyTorch</span>
+            <span class="skill-pill">Hugging Face</span>
+            <span class="skill-pill">Pinecone</span>
+            <span class="skill-pill">ChromaDB</span>
+            <span class="skill-pill">Weaviate</span>
+            <span class="skill-pill">LangChain</span>
+            <span class="skill-pill">LangGraph</span>
+            <span class="skill-pill">Docker</span>
+            <span class="skill-pill">Kubernetes</span>
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">Streamlit</span>
+            <span class="skill-pill">MLflow</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="modules">
+      <h2>Detailed Syllabus</h2>
+      <p class="section-intro">
+        Each track is organized into modules that can be expanded below. The modules are presented in a practical sequence,
+        moving from foundations to implementation and then to independent projects.
+      </p>
+
+      <div class="track-banner">
+        <div>
+          <strong>Non-Technical Syllabus</strong>
+          <span>Best for business users, founders, operators, marketers, and anyone who wants to use AI intelligently.</span>
+        </div>
+        <div>
+          <strong>Typical duration</strong>
+          <span>12 weeks, with flexibility based on learner pace</span>
+        </div>
+      </div>
+
+      <details open>
+        <summary>Module 1: AI fundamentals, ecosystem, and economics</summary>
+        <div class="module-body">
+          <p>
+            Learners start with a plain-language introduction to AI and machine learning, then move into how AI tools work in
+            real business settings. The focus is on understanding what models can and cannot do, how context windows affect
+            output, and how usage costs are created.
+          </p>
+          <ul>
+            <li>Core AI and ML concepts explained clearly</li>
+            <li>Generative AI trends and real-world use cases</li>
+            <li>Applications in marketing, HR, customer service, and operations</li>
+            <li>Tokens, rate limits, and cost awareness</li>
+            <li>Prompt-based assistants and local inference basics</li>
+            <li>How LLMs differ from search engines and traditional software</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Module 2: Prompting and structured AI communication</summary>
+        <div class="module-body">
+          <p>
+            Students learn to write prompts that produce reliable and structured results. The goal is to turn a chatbot into a
+            useful assistant that can generate consistent, machine-readable outputs.
+          </p>
+          <ul>
+            <li>Zero-shot, one-shot, and few-shot prompting</li>
+            <li>System prompts and role-based behavior</li>
+            <li>JSON outputs, tables, and structured responses</li>
+            <li>Prompt strategies for more reliable outputs and fewer hallucinations</li>
+            <li>Prompt tuning for higher reliability</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Module 3: No-code automation and workflow design</summary>
+        <div class="module-body">
+          <p>
+            This module teaches learners how to connect tools and automate repetitive work using no-code or low-code platforms.
+            Learners also gain an intuitive understanding of APIs, webhooks, and data movement between applications.
+          </p>
+          <ul>
+            <li>Zapier, Make, n8n, Airtable, Bubble, and related tools</li>
+            <li>Webhooks, REST APIs, and JSON data handling</li>
+            <li>Workflow planning and automation architecture</li>
+            <li>Business applications such as email routing, spreadsheet analysis, and CRM updates</li>
+            <li>AI-driven content generation, lead qualification, and support routing</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Module 4: Local AI, privacy, and document analysis</summary>
+        <div class="module-body">
+          <p>
+            Learners are introduced to local model usage for privacy-sensitive work. The training explains how to choose model
+            sizes, understand hardware constraints, and use local tools to analyze files without sending data to external APIs.
+          </p>
+          <ul>
+            <li>Local AI tools such as LM Studio and Ollama</li>
+            <li>Model selection and quantization concepts</li>
+            <li>Offline document chat and retrieval workflows</li>
+            <li>Privacy-first usage for sensitive files and internal work</li>
+            <li>When to use local models versus cloud tools</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Module 5: Agentic systems and AI strategy</summary>
+        <div class="module-body">
+          <p>
+            The final module moves beyond single-step workflows and into multi-step or multi-agent systems. Learners design AI
+            processes that can plan, retrieve information, and complete tasks with minimal manual intervention.
+          </p>
+          <ul>
+            <li>Agent workflows and multi-step automation</li>
+            <li>Enterprise AI adoption and governance basics</li>
+            <li>Risk awareness, trust, and safety</li>
+            <li>Human-in-the-loop review and change management</li>
+            <li>Business transformation with AI</li>
+          </ul>
+        </div>
+      </details>
+
+      <div style="height: 18px;"></div>
+
+      <div class="track-banner">
+        <div>
+          <strong>Technical Syllabus</strong>
+          <span>Best for developers, engineers, analysts, and technical learners who want to build AI systems.</span>
+        </div>
+        <div>
+          <strong>Typical duration</strong>
+          <span>16 weeks, with depth adjusted to learner ability</span>
+        </div>
+      </div>
+
+      <details open>
+        <summary>Module 1: Python, math foundations, and deep learning basics</summary>
+        <div class="module-body">
+          <p>
+            The technical path starts with a focused review of the math and Python foundation needed for AI development. Learners
+            revisit the core principles that support modern machine learning and deep learning systems.
+          </p>
+          <ul>
+            <li>Python, NumPy, and data handling essentials</li>
+            <li>Pandas, data preparation, and exploratory analysis</li>
+            <li>Linear algebra, calculus, and probability fundamentals</li>
+            <li>Supervised learning and model evaluation</li>
+            <li>Linear regression, logistic regression, trees, and ensembles</li>
+            <li>Neural networks and backpropagation</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Module 2: API orchestration and structured prompting</summary>
+        <div class="module-body">
+          <p>
+            Learners build robust AI integrations using commercial model APIs. The emphasis is on reliability, retry logic,
+            structured outputs, and clean software integration.
+          </p>
+          <ul>
+            <li>OpenAI and Anthropic API usage</li>
+            <li>Retry logic, batching, and async patterns</li>
+            <li>Function calling and JSON schema design</li>
+            <li>Structured tool execution and deterministic downstream workflows</li>
+            <li>Prompt templating and tool integration</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Module 3: RAG, embeddings, and vector databases</summary>
+        <div class="module-body">
+          <p>
+            This module covers retrieval-augmented generation from architecture to implementation. Learners create systems that
+            pull in relevant context from their own data before generating answers.
+          </p>
+          <ul>
+            <li>Embeddings and semantic similarity</li>
+            <li>Vector databases such as Pinecone, ChromaDB, and Weaviate</li>
+            <li>Chunking strategies and retrieval pipelines</li>
+            <li>Re-ranking and high-precision search</li>
+            <li>Hierarchical chunking, semantic routing, and query expansion</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Module 4: Open-source models, quantization, and fine-tuning</summary>
+        <div class="module-body">
+          <p>
+            Learners work with the open-source AI ecosystem and learn how to adapt models for specific use cases while managing
+            compute constraints and training budgets.
+          </p>
+          <ul>
+            <li>Hugging Face tools and model workflows</li>
+            <li>Quantization for reduced memory use</li>
+            <li>LoRA, QLoRA, PEFT, and adapter training</li>
+            <li>Local open-source model inference and GPU memory management</li>
+            <li>Fine-tuning workflows, instruction tuning, and preference alignment</li>
+            <li>Alignment techniques such as preference-based tuning</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Module 5: Agentic orchestration and MLOps</summary>
+        <div class="module-body">
+          <p>
+            The final technical module prepares learners for production work. They learn how to package, deploy, monitor, and
+            maintain AI systems in realistic environments.
+          </p>
+          <ul>
+            <li>LangChain, LangGraph, and agent design</li>
+            <li>Docker, deployment, and cloud workflows</li>
+            <li>Monitoring, telemetry, and cost awareness</li>
+            <li>CI/CD practices for AI applications</li>
+            <li>Kubernetes basics, experiment tracking, and logging</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <section class="section" id="capstones">
+      <h2>Capstone Projects</h2>
+      <p class="section-intro">
+        Both tracks end with projects that show practical mastery. The final deliverable should demonstrate real problem solving,
+        not just course completion.
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <span class="tag">Non-technical capstones</span>
+          <h3>Business-first AI outcomes</h3>
+          <ul>
+            <li>Fully automated enterprise lead engine with webhooks and CRM updates</li>
+            <li>Sovereign knowledge analyst for private document analysis with local AI</li>
+            <li>Autonomous content flywheel for research, drafting, and scheduling</li>
+            <li>AI solutions for marketing, operations, support, and business dashboards</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="tag">Technical capstones</span>
+          <h3>Engineering-grade AI systems</h3>
+          <ul>
+            <li>Production enterprise RAG API with telemetry and re-ranking</li>
+            <li>Domain-specific model fine-tuning and alignment with QLoRA</li>
+            <li>Stateful autonomous coding agent with GitHub workflow integration</li>
+            <li>Computer vision, anomaly detection, recommendation, or RL-based project</li>
+            <li>End-to-end deployment with MLOps, monitoring, and logging</li>
+          </ul>
+        </div>
+      </div>
+
+      <table class="summary-table" style="margin-top:16px;">
+        <thead>
+          <tr>
+            <th>Track</th>
+            <th>Project Style</th>
+            <th>Outcome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Non-technical</strong></td>
+            <td>Automation, local AI use, business systems, and no-code workflows</td>
+            <td>Practical AI confidence for work, entrepreneurship, and operations</td>
+          </tr>
+          <tr>
+            <td><strong>Technical</strong></td>
+            <td>Model development, API orchestration, RAG, fine-tuning, and deployment</td>
+            <td>Production-ready AI engineering skills and portfolio-level systems</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section" id="support">
+      <h2>Support, Certification, and Format</h2>
+      <p class="section-intro">
+        The training is designed as a guided experience from start to finish. Learners get structure, materials, follow-up, and
+        a certificate once they complete the required work.
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <span class="tag">Format</span>
+          <h3>Personalized 1:1 sessions</h3>
+          <p>
+            Sessions are scheduled weekly and tailored to the learner’s pace, background, and goals. The pace can slow down or
+            speed up depending on the material.
+          </p>
+        </div>
+        <div class="card">
+          <span class="tag">Materials</span>
+          <h3>Resources and practice support</h3>
+          <p>
+            Learners receive supporting materials, demos, and practice assignments to reinforce each week’s topic and help them
+            continue learning between sessions.
+          </p>
+        </div>
+        <div class="card">
+          <span class="tag">After completion</span>
+          <h3>Post-course guidance</h3>
+          <p>
+            Graduates receive follow-up support after the course and can continue to get help with project troubleshooting or
+            next-step guidance as they apply AI in the real world.
+          </p>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>Important:</strong> The program does not force students to finish on a rigid timetable. It is designed so the
+        learner leaves confident, capable, and ready to apply what they learned.
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <h2>Pricing</h2>
+      <p class="section-intro">
+        Pricing reflects premium 1-on-1 instruction, customized curriculum planning, live coaching, and follow-up support.
+        The program uses two core pricing models aligned to the two tracks, with flexible time commitments. Pricing is negotiable based on the actual teaching hours invested—learners can choose a schedule that fits their availability and progress at their own pace.
+      </p>
+
+      <div class="price-model-grid">
+        <article class="price-model primary">
+          <span class="badge blue">Model 1</span>
+          <h3>Non-Technical Program</h3>
+          <div class="range">$2,000</div>
+          <p class="meta">6-month flexible program • premium 1:1 support</p>
+          <ul>
+            <li><strong>Time commitment options:</strong></li>
+            <li>6 hours per weekend (3-hour block)</li>
+            <li>OR 1 hour every weekday (Monday–Friday)</li>
+            <li>OR mix of both as schedule allows</li>
+            <li style="margin-top: 8px;"><strong>What's included:</strong></li>
+            <li>Live 1:1 training sessions at your pace</li>
+            <li>Customized curriculum for tools, automation, and local AI</li>
+            <li>Materials, practice, and project guidance</li>
+            <li>Certificate of completion</li>
+            <li>Post-course follow-up support</li>
+          </ul>
+          <p style="margin-top:12px; font-size:0.92rem; color:var(--muted);"><em>Negotiable: price scales with your actual teaching hours. Fast-track into 2–3 months costs more per hour; slower 6-month pace costs less per hour.</em></p>
+        </article>
+
+        <article class="price-model secondary">
+          <span class="badge green">Model 2</span>
+          <h3>Technical Program</h3>
+          <div class="range">$3,500</div>
+          <p class="meta">6-month flexible program • premium 1:1 support</p>
+          <ul>
+            <li><strong>Time commitment options:</strong></li>
+            <li>6 hours per weekend (3-hour block)</li>
+            <li>OR 1 hour every weekday (Monday–Friday)</li>
+            <li>OR mix of both as schedule allows</li>
+            <li style="margin-top: 8px;"><strong>What's included:</strong></li>
+            <li>Live 1:1 training sessions with code review and projects</li>
+            <li>Deep-dive into ML, RAG, fine-tuning, and deployment</li>
+            <li>Capstone project guidance and support</li>
+            <li>90-day post-course milestone reviews</li>
+            <li>Certificate of completion</li>
+          </ul>
+          <p style="margin-top:12px; font-size:0.92rem; color:var(--muted);"><em>Negotiable: price scales with your actual teaching hours. Fast-track into 2–3 months costs more per hour; slower 6-month pace costs less per hour.</em></p>
+        </article>
+      </div>
+
+      <div class="split" style="margin-top:16px;">
+        <div class="card">
+          <span class="tag">Flexible scheduling</span>
+          <h3>How time commitment works</h3>
+          <ul class="mini-list">
+            <li><strong>Weekend option:</strong> 6 hours per week (e.g., Saturday morning or Sunday afternoon)</li>
+            <li><strong>Weekday option:</strong> 1 hour per day, Monday through Friday</li>
+            <li><strong>Hybrid option:</strong> Mix of both (e.g., 2 weekday hours + 1 weekend hour)</li>
+            <li><strong>Custom pace:</strong> Choose your own schedule; the program adjusts to your availability</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="tag">Pricing negotiation</span>
+          <h3>How pricing is determined</h3>
+          <ul class="mini-list">
+            <li><strong>Base pricing:</strong> $2,000 (non-tech) or $3,000 (tech) for a typical 6-month program</li>
+            <li><strong>Faster pace:</strong> If you want to finish in 2–3 months, price scales up (more hours per week)</li>
+            <li><strong>Slower pace:</strong> If you prefer a gentler 6–8 month schedule, price can be negotiated down</li>
+            <li><strong>Final price:</strong> Calculated based on your actual teaching time invested and learner's pace</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 24px; padding: 20px; background: #fff; border: 1px solid var(--line); border-radius: 18px;">
+        <h3 style="margin: 0 0 8px; color: var(--text);">Example Pricing Scenarios</h3>
+        <p style="color: var(--muted); margin: 0 0 16px; font-size: 0.95rem;">
+          Below are real-world examples of how pricing adjusts based on learner pace and teaching hours invested.
+        </p>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th>Weekly Hours</th>
+              <th>Duration</th>
+              <th>Non-Technical</th>
+              <th>Technical</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Relaxed pace</strong></td>
+              <td>1 hour/day (5 hrs/week)</td>
+              <td>6–8 months</td>
+              <td>$1,800–$2,000</td>
+              <td>$2,700–$3,000</td>
+            </tr>
+            <tr>
+              <td><strong>Standard pace</strong></td>
+              <td>3 hrs/weekend (3 hrs/week)</td>
+              <td>6 months</td>
+              <td>$2,000</td>
+              <td>$3,000</td>
+            </tr>
+            <tr>
+              <td><strong>Intensive pace</strong></td>
+              <td>1 hr/day + 3 hrs/weekend (8 hrs/week)</td>
+              <td>2–3 months</td>
+              <td>$2,800–$3,200</td>
+              <td>$4,200–$4,800</td>
+            </tr>
+            <tr>
+              <td><strong>Fast-track</strong></td>
+              <td>15 hrs/week (full-time focus)</td>
+              <td>4 weeks</td>
+              <td>$4,500+</td>
+              <td>$6,750+</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note" style="margin-top: 20px;">
+        <strong>Flexible negotiation:</strong> All pricing is negotiable based on your learner's specific timeline, pace, and teaching hours needed. Contact us to discuss a custom plan that works for your schedule and budget.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>At a Glance</h2>
+      <p class="section-intro">
+        This summary is useful if you want a concise comparison of the two tracks before diving into the full syllabus.
+      </p>
+
+      <table class="summary-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Non-Technical</th>
+            <th>Technical</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Audience</strong></td>
+            <td>Business users, operators, founders, creatives</td>
+            <td>Developers, engineers, data and technical learners</td>
+          </tr>
+          <tr>
+            <td><strong>Main goal</strong></td>
+            <td>Use AI effectively with tools and automations</td>
+            <td>Build, tune, and deploy AI systems</td>
+          </tr>
+          <tr>
+            <td><strong>Core focus</strong></td>
+            <td>Prompting, no-code workflows, local AI, agentic basics</td>
+            <td>Python, ML, RAG, fine-tuning, MLOps, agentic engineering</td>
+          </tr>
+          <tr>
+            <td><strong>Outcome</strong></td>
+            <td>AI confidence for business use and innovation</td>
+            <td>Portfolio-ready AI engineering capability</td>
+          </tr>
+          <tr>
+            <td><strong>Pricing style</strong></td>
+            <td>Custom premium 1:1 coaching</td>
+            <td>Custom premium 1:1 coaching</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="footer">
+        If you want, I can also turn this into a downloadable PDF-style layout, add your brand colors/logo, or split it into a
+        sales page and a separate curriculum brochure.
+      </div>
+    </section>
+  </main>
+</body>
+</html>

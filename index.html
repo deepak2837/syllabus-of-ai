@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fix My Stack - Master AI Through 1:1 Coaching</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="4" width="32" height="32" rx="8" fill="url(#gradient)" />
+          <path d="M12 20h16M20 12v16" stroke="white" stroke-width="3" stroke-linecap="round" />
+          <defs>
+            <linearGradient id="gradient" x1="4" y1="4" x2="36" y2="36">
+              <stop offset="0%" stop-color="#2563eb" />
+              <stop offset="100%" stop-color="#0f766e" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="brand-name">Fix My Stack</span>
+      </div>
+      
+      <span class="eyebrow">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 0L10.5 5.5L16 8L10.5 10.5L8 16L5.5 10.5L0 8L5.5 5.5L8 0Z" />
+        </svg>
+        Premium 1:1 AI Training
+      </span>
+      
+      <h1>Master AI with personalized coaching—not generic video courses</h1>
+      
+      <p class="lead">
+        We don't rush you through a syllabus. We keep teaching until you're genuinely confident and industry-ready. 
+        Real projects, hands-on practice, and mentorship that adapts to your pace.
+      </p>
+
+      <div class="hero-grid">
+        <div class="metric">
+          <strong>2 Paths</strong>
+          <span>No-Tech & Tech Learner</span>
+        </div>
+        <div class="metric">
+          <strong>12–16 Weeks</strong>
+          <span>6 hours every Saturday/Sunday</span>
+        </div>
+        <div class="metric">
+          <strong>Live 1:1</strong>
+          <span>Personal coaching sessions</span>
+        </div>
+        <div class="metric">
+          <strong>Certified</strong>
+          <span>Official completion certificate</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Track Selector -->
+    <section class="track-selector">
+      <h2 class="selector-title">Choose Your Learning Path</h2>
+      <div class="tabs">
+        <button class="tab active" data-track="non-technical">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/>
+          </svg>
+          No-Tech Learner
+        </button>
+        <button class="tab" data-track="technical">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M6 4l-4 4 4 4M14 4l4 4-4 4M12 2l-4 16"/>
+          </svg>
+          Tech Learner
+        </button>
+      </div>
+    </section>
+
+    <!-- Track Content -->
+    <div id="track-content"></div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+    <!-- Track Content Container -->
+    <div id="track-content">
+      <!-- No-Tech Learner Track -->
+      <div class="track-panel active" data-track="non-technical">
+        <div class="section track-overview">
+          <div class="track-hero">
+            <span class="track-badge blue">For Non-Technical Professionals</span>
+            <h2>Use AI to automate, innovate, and scale—without writing code</h2>
+            <p class="track-lead">
+              Perfect for founders, marketers, operators, and business leaders who want to harness AI's power through 
+              no-code tools, automation platforms, and smart workflows. Build real solutions that drive ROI.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card highlight">
+              <span class="card-icon">🎯</span>
+              <h3>Who This Is For</h3>
+              <ul>
+                <li>Entrepreneurs building AI-powered businesses</li>
+                <li>Marketing professionals automating content</li>
+                <li>Operations leaders streamlining workflows</li>
+                <li>Anyone wanting AI superpowers without coding</li>
+              </ul>
+            </div>
+            <div class="card highlight">
+              <span class="card-icon">🚀</span>
+              <h3>What You'll Build</h3>
+              <ul>
+                <li>Automated lead generation systems</li>
+                <li>Content creation pipelines that scale</li>
+                <li>Private AI for sensitive documents</li>
+                <li>Multi-step workflows running autonomously</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed Syllabus -->
+        <div class="section">
+          <h2>Complete 12-Week Syllabus</h2>
+          <p class="section-intro">
+            Every Saturday/Sunday, 6 hours of focused learning. Or choose 1 hour daily on weekdays—whatever fits your schedule.
+          </p>
+          
+          <div class="curriculum">
+            <div class="module">
+              <div class="module-number">Week 1-2</div>
+              <div class="module-content">
+                <h3>AI Basics & Real-World Use Cases</h3>
+                <p><strong>What you'll master:</strong></p>
+                <ul>
+                  <li>Core AI/ML concepts explained in plain language</li>
+                  <li>Generative AI trends and how they apply to business</li>
+                  <li>Real applications in marketing, HR, customer service, and operations</li>
+                  <li>Understanding what AI can (and can't) do for your business</li>
+                  <li>Token-based billing, rate limits, and cost management</li>
+                </ul>
+                <div class="tools-badge">
+                  <span class="tool-tag">ChatGPT</span>
+                  <span class="tool-tag">Claude</span>
+                  <span class="tool-tag">Bard</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="module">
+              <div class="module-number">Week 3-4</div>
+              <div class="module-content">
+                <h3>No-Code AI Tools & Prototyping</h3>
+                <p><strong>What you'll master:</strong></p>
+                <ul>
+                  <li>Hands-on with ChatGPT for business automation</li>
+                  <li>Image generation with Midjourney and DALL-E</li>
+                  <li>Text generation with Jasper and Copy.ai</li>
+                  <li>Visual ML builders: Airtable AI and Teachable Machine</li>
+                  <li>Build your first AI prototypes (blog generator, image classifier)</li>
+                </ul>
+                <div class="tools-badge">
+                  <span class="tool-tag">Midjourney</span>
+                  <span class="tool-tag">DALL-E</span>
+                  <span class="tool-tag">Jasper</span>
+                  <span class="tool-tag">Copy.ai</span>
+                  <span class="tool-tag">Teachable Machine</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="module">
+              <div class="module-number">Week 5-8</div>
+              <div class="module-content">
+                <h3>Automations & Integration Mastery</h3>
+                <p><strong>What you'll master:</strong></p>
+                <ul>
+                  <li>Building Zapier and Make workflows from scratch</li>
+                  <li>Connecting AI APIs to your existing apps</li>
+                  <li>Auto-generating email replies and spreadsheet analysis</li>
+                  <li>Advanced LLM prompt strategies for consistent outputs</li>
+                  <li>Token management and understanding rate limits</li>
+                  <li>Webhooks, REST APIs, and JSON data handling</li>
+                </ul>
+                <div class="tools-badge">
+                  <span class="tool-tag">Zapier</span>
+                  <span class="tool-tag">Make</span>
+                  <span class="tool-tag">n8n</span>
+                  <span class="tool-tag">Airtable</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="module">
+              <div class="module-number">Week 9-12</div>
+              <div class="module-content">
+                <h3>Capstone Projects & AI Entrepreneurship</h3>
+                <p><strong>What you'll master:</strong></p>
+                <ul>
+                  <li>Identify a real business problem and solve it with AI</li>
+                  <li>Build an AI-powered marketing assistant or data dashboard</li>
+                  <li>Product thinking: designing for ROI and business value</li>
+                  <li>Running local LLMs for privacy-sensitive work</li>
+                  <li>Responsible AI: privacy, bias mitigation, and ethics</li>
+                  <li>Present your capstone and receive certification</li>
+                </ul>
+                <div class="project-highlight">
+                  <strong>Example Capstones:</strong> Automated lead engine, AI content flywheel, private document analyzer
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Outcomes -->
+        <div class="section outcomes-section">
+          <h2>What You'll Walk Away With</h2>
+          <div class="grid-3">
+            <div class="card feature">
+              <span class="feature-icon">💡</span>
+              <h3>AI Fluency</h3>
+              <p>Confidently use ChatGPT, Midjourney, automation platforms, and local LLMs for real business outcomes.</p>
+            </div>
+            <div class="card feature">
+              <span class="feature-icon">⚙️</span>
+              <h3>Automation Skills</h3>
+              <p>Build workflows that connect tools, automate tasks, and scale operations without touching code.</p>
+            </div>
+            <div class="card feature">
+              <span class="feature-icon">🎓</span>
+              <h3>Official Certificate</h3>
+              <p>Earn your Fix My Stack certification proving you can build and deploy AI solutions.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing for No-Tech -->
+        <div class="section pricing-section">
+          <h2>Investment</h2>
+          <div class="price-card-modern featured">
+            <div class="price-header">
+              <span class="badge blue">No-Tech Learner</span>
+              <div class="price-display">
+                <span class="currency">$</span>
+                <span class="amount">2,500</span>
+              </div>
+              <p class="price-subtitle">12-week program • Flexible schedule</p>
+            </div>
+
+            <div class="price-body">
+              <h4>What's Included</h4>
+              <ul class="check-list">
+                <li>6 hours every Saturday/Sunday —your dedicated AI learning time</li>
+                <li>OR 1 hour Monday–Friday if weekdays work better</li>
+                <li>Live 1:1 coaching tailored to your pace and goals</li>
+                <li>Hands-on projects you can use in your business immediately</li>
+                <li>Lifetime access to course materials and resources</li>
+                <li>Official Fix My Stack certification upon completion</li>
+                <li>90-day post-course support for troubleshooting</li>
+              </ul>
+
+              <div class="pricing-note">
+                <strong>Flexible pacing:</strong> Want to finish faster? We can do intensive 2-3 month programs. 
+                Prefer a slower 6-8 month pace? We'll adjust pricing based on your actual time commitment.
+              </div>
+
+              <a href="mailto:hello@fixmystack.com" class="cta-button">Start Learning</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Learner Track -->
+      <div class="track-panel" data-track="technical">
+        <div class="section track-overview">
+          <div class="track-hero">
+            <span class="track-badge green">For Developers & Engineers</span>
+            <h2>Build, fine-tune, and deploy production-grade AI systems</h2>
+            <p class="track-lead">
+              For developers, data scientists, and technical professionals who want full-stack AI mastery—from 
+              training models to deploying them in production with MLOps best practices.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card highlight">
+              <span class="card-icon">💻</span>
+              <h3>Who This Is For</h3>
+              <ul>
+                <li>Software developers building AI-powered apps</li>
+                <li>Data scientists moving into production</li>
+                <li>Engineers wanting full-stack AI capabilities</li>
+                <li>Technical founders shipping AI products</li>
+              </ul>
+            </div>
+            <div class="card highlight">
+              <span class="card-icon">⚡</span>
+              <h3>What You'll Build</h3>
+              <ul>
+                <li>Production RAG systems with vector databases</li>
+                <li>Fine-tuned models for specific domains</li>
+                <li>Autonomous coding agents with tool use</li>
+                <li>Deployed ML pipelines with full monitoring</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed Syllabus -->
+        <div class="section">
+          <h2>Complete 16-Week Syllabus</h2>
+          <p class="section-intro">
+            Every Saturday/Sunday, 6 hours of intensive technical training. Or choose 1 hour daily on weekdays for consistent progress.
+          </p>
+          
+          <div class="curriculum">
+            <div class="module">
+              <div class="module-number">Week 1-2</div>
+              <div class="module-content">
+                <h3>Python & Machine Learning Foundations</h3>
+                <p><strong>What you'll master:</strong></p>
+                <ul>
+                  <li>Python refresher and data handling with Pandas</li>
+                  <li>NumPy for numerical computing and matrix operations</li>
+                  <li>Math foundations: linear algebra, calculus, probability</li>
+                  <li>Supervised learning: linear regression and classification</li>
+                  <li>Model evaluation metrics and cross-validation</li>
+                  <li>scikit-learn for classical ML algorithms</li>
+                </ul>
+                <div class="tools-badge">
+                  <span class="tool-tag">Python</span>
+                  <span class="tool-tag">NumPy</span>
+                  <span class="tool-tag">Pandas</span>
+                  <span class="tool-tag">scikit-learn</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="module">
+              <div class="module-number">Week 3-6</div>
+              <div class="module-content">
+                <h3>Advanced ML & Deep Learning</h3>
+                <p><strong>What you'll master:</strong></p>
+                <ul>
+                  <li>Decision trees and ensemble methods (XGBoost, Random Forest)</li>
+                  <li>Neural networks from scratch with TensorFlow</li>
+                  <li>CNNs for computer vision and image recognition</li>
+                  <li>RNNs for sequence modeling and time series</li>
+                  <li>Introduction to PyTorch and dynamic computation graphs</li>
+                  <li>Transfer learning and pre-trained models</li>
+                </ul>
+                <div class="tools-badge">
+                  <span class="tool-tag">TensorFlow</span>
+                  <span class="tool-tag">PyTorch</span>
+                  <span class="tool-tag">XGBoost</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="module">
+              <div class="module-number">Week 7-10</div>
+              <div class="module-content">
+                <h3>NLP, LLMs & Generative AI</h3>
+                <p><strong>What you'll master:</strong></p>
+                <ul>
+                  <li>Text preprocessing, tokenization, and embeddings</li>
+                  <li>Transformer architecture and attention mechanisms</li>
+                  <li>Using Hugging Face transformers library</li>
+                  <li>Fine-tuning pre-trained LLMs for specific tasks</li>
+                  <li>Building custom chatbots and AI assistants</li>
+                  <li>RAG (Retrieval-Augmented Generation) implementation</li>
+                  <li>Vector databases: Pinecone, ChromaDB, Weaviate</li>
+                </ul>
+                <div class="tools-badge">
+                  <span class="tool-tag">Hugging Face</span>
+                  <span class="tool-tag">LangChain</span>
+                  <span class="tool-tag">Pinecone</span>
+                  <span class="tool-tag">ChromaDB</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="module">
+              <div class="module-number">Week 11-12</div>
+              <div class="module-content">
+                <h3>Deployment & MLOps</h3>
+                <p><strong>What you'll master:</strong></p>
+                <ul>
+                  <li>Git and GitHub workflows for ML projects</li>
+                  <li>Containerizing models with Docker</li>
+                  <li>Setting up CI/CD pipelines for model deployment</li>
+                  <li>Deploying models to cloud (AWS, GCP) or local servers</li>
+                  <li>Monitoring, logging, and telemetry for production systems</li>
+                  <li>Model versioning and experiment tracking with MLflow</li>
+                </ul>
+                <div class="tools-badge">
+                  <span class="tool-tag">Docker</span>
+                  <span class="tool-tag">Kubernetes</span>
+                  <span class="tool-tag">GitHub</span>
+                  <span class="tool-tag">MLflow</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="module">
+              <div class="module-number">Week 13-16</div>
+              <div class="module-content">
+                <h3>Capstone: End-to-End AI System</h3>
+                <p><strong>What you'll master:</strong></p>
+                <ul>
+                  <li>Design and build a complete AI system from scratch</li>
+                  <li>Data collection, preprocessing, and feature engineering</li>
+                  <li>Model training, evaluation, and optimization</li>
+                  <li>Full deployment with monitoring and logging</li>
+                  <li>Documentation and best practices (ethics, reproducibility)</li>
+                  <li>Present your project and receive certification</li>
+                </ul>
+                <div class="project-highlight">
+                  <strong>Example Capstones:</strong> Recommendation system, fraud detector, RL game agent, production RAG API
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Outcomes -->
+        <div class="section outcomes-section">
+          <h2>What You'll Walk Away With</h2>
+          <div class="grid-3">
+            <div class="card feature">
+              <span class="feature-icon">🔧</span>
+              <h3>Full-Stack AI Skills</h3>
+              <p>Build, train, fine-tune, and deploy complete AI systems using Python, PyTorch, and modern frameworks.</p>
+            </div>
+            <div class="card feature">
+              <span class="feature-icon">🚀</span>
+              <h3>Production Ready</h3>
+              <p>Master Docker, Kubernetes, CI/CD, and MLOps to ship AI systems that scale in real-world environments.</p>
+            </div>
+            <div class="card feature">
+              <span class="feature-icon">🎓</span>
+              <h3>Official Certificate</h3>
+              <p>Earn your Fix My Stack certification with a portfolio-ready capstone project.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing for Tech -->
+        <div class="section pricing-section">
+          <h2>Investment</h2>
+          <div class="price-card-modern featured">
+            <div class="price-header">
+              <span class="badge green">Tech Learner</span>
+              <div class="price-display">
+                <span class="currency">$</span>
+                <span class="amount">3,000</span>
+              </div>
+              <p class="price-subtitle">16-week program • Flexible schedule</p>
+            </div>
+
+            <div class="price-body">
+              <h4>What's Included</h4>
+              <ul class="check-list">
+                <li>6 hours every Saturday/sunday—deep technical training sessions</li>
+                <li>OR 1 hour Monday–Friday if weekdays work better</li>
+                <li>Live 1:1 technical coaching with code reviews</li>
+                <li>Portfolio-ready capstone project with full deployment</li>
+                <li>Lifetime access to all materials and code examples</li>
+                <li>Official Fix My Stack certification upon completion</li>
+                <li>90-day post-course milestone reviews and support</li>
+              </ul>
+
+              <div class="pricing-note">
+                <strong>Flexible pacing:</strong> Want to finish faster? We can do intensive 2-3 month programs. 
+                Prefer a slower 6-8 month pace? We'll adjust pricing based on your actual time commitment.
+              </div>
+
+              <a href="mailto:hello@fixmystack.com" class="cta-button">Start Learning</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Section -->
+    <section class="section why-section">
+      <h2>Why Fix My Stack?</h2>
+      <div class="grid-3">
+        <div class="card feature">
+          <span class="feature-icon">🎯</span>
+          <h3>Mastery Over Speed</h3>
+          <p>We don't rush you through material. You progress when you're genuinely confident, not when the calendar says so.</p>
+        </div>
+        <div class="card feature">
+          <span class="feature-icon">🔄</span>
+          <h3>Your Pace, Your Way</h3>
+          <p>Struggling with a concept? We slow down. Flying through material? We speed up. It's that simple.</p>
+        </div>
+        <div class="card feature">
+          <span class="feature-icon">🛠️</span>
+          <h3>Real Projects, Real Skills</h3>
+          <p>Build things you can show employers or use in your business—not toy examples from tutorials.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" id="contact">
+      <div class="cta-content">
+        <h2>Ready to master AI?</h2>
+        <p>Stop watching tutorials. Start building real AI systems with personalized 1:1 coaching every Saturday.</p>
+        <div class="cta-buttons">
+          <a href="mailto:hello@fixmystack.com" class="cta-button primary">Get Started</a>
+          <a href="#track-content" class="cta-button secondary">View Full Syllabus</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2026 Fix My Stack. Transforming professionals through personalized AI education.</p>
+    </footer>
